@@ -5,14 +5,14 @@
 </head>
 <body>
     <?php
-        require_once 'querys.php';
-
+        require_once 'db.php';
         $id = $_GET['id'];
 
+        $p_details = $conn->query("SELECT * FROM product WHERE id='".$id."'");
+        $p_detail = $p_details->fetchAll();
 
-        get_product_details($conn, $id);
+        print_r($p_detail);
 
-        //print_r($p_detail);
     ?>
 </body>
 </html>
