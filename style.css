@@ -1,0 +1,37 @@
+.nav {
+    overflow: hidden;
+}
+
+.nav a {
+    float: left;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .droptrigger {
+    margin: 0;
+}
+
+.dropcontent {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown:hover .dropcontent {
+    display: block;
+}
+
+footer {
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
