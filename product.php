@@ -1,7 +1,7 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
 </head>
 <body>
     <?php
@@ -31,9 +31,7 @@
                 <tr></tr>
             </table>
         ';
-        //print_r($p_detail);
 
-        //print_r($p_detail[0]['id']);
         if (isset($p_detail[0]['rating'])) {
             echo 'Review gesetzt';
         } else {

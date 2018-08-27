@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Testsite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>

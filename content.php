@@ -1,7 +1,7 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=1" />
 </head>
 <body>
     <?php
@@ -16,9 +16,11 @@
         
         <div class="product-preview">';
             foreach ($product as $row) {
-                 echo ' <p>
-                            '.$row['product_name'].'<br>'.$row['description'].'
-                        </p>';
+                 echo '
+                 <ul>
+                    <li><h3>'.$row['product_name'].'</h3>
+                    '.$row['description'].'</li>
+                </ul>';
             }
         echo'</div>
         
@@ -37,7 +39,7 @@
         count++;
         if (count > slides.length) { count = 1; }
         slides[count-1].setAttribute("style","display:block");
-        setTimeout(simpleSlides, 10000);
+        setTimeout(simpleSlides, 8000);
     }
 
     var count = 0;

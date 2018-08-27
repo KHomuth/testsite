@@ -1,14 +1,41 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
-    background-color: #d5d5d5;
+    background-color: #9099a2;
 }
 
 article {
-    background-color: #ffffff;
+    background-color: #d5d5d5;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    background-color:  #6d7993;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #96858f;
+}
+
+ul {
+    list-style: none;
 }
 
 .navigation {
@@ -70,31 +97,6 @@ article {
     width: 75vw;
 }
 
-.product-preview {
-    grid-template-columns: auto auto;
-}
-
-footer {
-    width: 100%;
-    grid-template-columns: auto auto auto;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    background-color:  #6d7993;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-footer a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-footer a:hover {
-    text-decoration: none;
-    color: #96858f;
-}
-
 .slides {
     display: none;
     /*width: 50%;*/
@@ -102,6 +104,10 @@ footer a:hover {
     height: auto;
     margin-left: auto;
     margin-right: auto;
+}
+
+.simpleSlides {
+    height: 25%;
 }
 
 .animate-right {
