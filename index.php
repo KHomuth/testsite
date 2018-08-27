@@ -12,7 +12,7 @@
         require_once 'querys.php';
     ?>
     <header>
-        <div class="nav">
+        <nav class="navigation">
             <a href="content.php">Home</a>
             <div class="dropdown">
                 <a class="droptrigger">Produkte</a>
@@ -25,15 +25,17 @@
                                                 '.$row['product_name'].'
                                             </a>
                                         </li>';
-                           }
+                                }
                         ?>
                     </ul>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
-    <main class="main-content"></main>
-    <footer>
+    <main>
+        <article class="main-content"></article>
+    </main>
+    <footer class="foot">
         <a href="impressum.php">Impressum</a>
         <a href="agb.php">AGB</a>
         <a href="datenschutz.php">Datenschutz</a>
@@ -44,7 +46,11 @@
     $(document).ready(function(){
         $('.main-content').load('content.php');
 
-        $('.nav a').click(function(e) {
+        $('.navigation a').click(function(e) {
+            e.preventDefault();
+            $('.main-content').load(e.target.href);
+        })
+        $('.foot a').click(function(e) {
             e.preventDefault();
             $('.main-content').load(e.target.href);
         })

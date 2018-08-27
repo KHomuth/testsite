@@ -34,7 +34,7 @@
         //print_r($p_detail);
 
         //print_r($p_detail[0]['id']);
-        if (isset($p_detail[0]['review'])) {
+        if (isset($p_detail[0]['rating'])) {
             echo 'Review gesetzt';
         } else {
             echo 'Artikel noch nicht bewertet';

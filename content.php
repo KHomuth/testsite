@@ -37,7 +37,7 @@
         count++;
         if (count > slides.length) { count = 1; }
         slides[count-1].setAttribute("style","display:block");
-        setTimeout(simpleSlides, 5000);
+        setTimeout(simpleSlides, 10000);
     }
 
     var count = 0;

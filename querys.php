@@ -6,4 +6,5 @@
         
         $products = $conn->query("SELECT * FROM product");
         $product = $products->fetchAll();
+
 ?>
