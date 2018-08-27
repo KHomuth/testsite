@@ -2,10 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Testsite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
@@ -33,7 +32,7 @@
             </div>
         </div>
     </header>
-    <article class="main-content"></article>
+    <main class="main-content"></main>
     <footer>
         <a href="impressum.php">Impressum</a>
         <a href="agb.php">AGB</a>
