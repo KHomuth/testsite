@@ -8,9 +8,7 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-    <?php
-        require_once 'querys.php';
-    ?>
+    <?php require_once 'querys.php';?>
     <header>
         <nav class="navigation">
             <a href="content.php">Home</a>
@@ -40,19 +38,19 @@
         <a href="agb.php">AGB</a>
         <a href="datenschutz.php">Datenschutz</a>
     </footer>
+    <script>
+        $(document).ready(function(){
+            $('.main-content').load('content.php');
+
+            $('.navigation a').click(function(e) {
+                e.preventDefault();
+                $('.main-content').load(e.target.href);
+            })
+            $('.foot a').click(function(e) {
+                e.preventDefault();
+                $('.main-content').load(e.target.href);
+            })
+        });
+    </script>
 </body>
 </html>
-<script>
-    $(document).ready(function(){
-        $('.main-content').load('content.php');
-
-        $('.navigation a').click(function(e) {
-            e.preventDefault();
-            $('.main-content').load(e.target.href);
-        })
-        $('.foot a').click(function(e) {
-            e.preventDefault();
-            $('.main-content').load(e.target.href);
-        })
-    });
-</script>

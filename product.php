@@ -15,27 +15,37 @@
         $img = $p_img->fetchAll();
 
         echo'
-            <table>
-                <tr>
-                    <td with="auto">
-                        <img width="75%" src='.$img[0]['path'].'>
-                    </td>
-                    <td width="30%">
-                        <ul>
-                            <li><h2>'.$p_detail[0]['product_name'].'</h2></li>
-                            <li>'.$p_detail[0]['description'].'</li>
-                            <li>'.$p_detail[0]['price'].' € <button>Kaufen!</button></li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr></tr>
-            </table>
+            <section class="article">
+                <table>
+                    <tr>
+                        <td with="auto">
+                            <img width="75%" src='.$img[0]['path'].'>
+                        </td>
+                        <td width="30%">
+                            <ul>
+                                <li><h2>'.$p_detail[0]['product_name'].'</h2></li>
+                                <li>'.$p_detail[0]['description'].'</li>
+                                <li>'.$p_detail[0]['price'].' € <button>Kaufen!</button></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
         ';
 
         if (isset($p_detail[0]['rating'])) {
-            echo 'Review gesetzt';
+            echo '
+                <section class="review">
+                    <ul>
+                        <li class="rname">'.$p_detail[0]['review_name'].'</li>
+                        <li class="rating">'.$p_detail[0]['rating'].' / 10</li>
+                        <div class="clear"></div>
+                        <li class="review_text">'.$p_detail[0]['review'].'</li>
+                    </ul> 
+                </section>';
         } else {
-            echo 'Artikel noch nicht bewertet';
+            echo '
+                <section class="review">Artikel noch nicht bewertet.</section>';
         }
         
 

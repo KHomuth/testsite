@@ -8,13 +8,13 @@
         require_once 'querys.php';
 
         //Slideshow mit Hilfe von https://www.mediaevent.de/javascript/simple-lightbox.html
-        echo'<div class="simpleSlides">';
+        echo'<section class="simpleSlides">';
             foreach($image as $row){
                 echo '<img class="slides animate-right" src='.$row['path'].'>';
             }
-        echo'</div>
+        echo'</section>
         
-        <div class="product-preview">';
+        <section class="product-preview">';
             foreach ($product as $row) {
                  echo '
                  <ul>
@@ -22,7 +22,7 @@
                     '.$row['description'].'</li>
                 </ul>';
             }
-        echo'</div>
+        echo'</section>
         
         <iframe width="560" height="315" src="https://www.youtube.com/embed/9WGKcLyllp0" frameborder="0" allowfullscreen></iframe>
         ';
